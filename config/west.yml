@@ -4,10 +4,12 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: kumamuk-git
       url-base: https://github.com/kumamuk-git
+    - name: vtflab
+      url-base: https://github.com/VTFLAB
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: v0.3-branch
+      remote: vtflab
+      revision: v0.3-roba-layer-notify
       import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: kumamuk-git
