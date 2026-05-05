@@ -126,6 +126,14 @@ jobs:
           fi
         if: ${{ !cancelled() }}
 
+      - name: ${{ env.display_name }} ZMK Studio proto generated headers (debug)
+        run: |
+          find "${{ env.build_dir }}" -name 'keymap.pb.h' -o -name 'keymap.pb.c' | while read f; do
+            echo "=== $f ==="
+            cat "$f"
+          done
+        if: ${{ !cancelled() }}
+
       - name: Rename artifacts
         shell: sh -x {0}
         run: |
